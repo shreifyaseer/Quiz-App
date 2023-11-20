@@ -1,0 +1,121 @@
+*{
+    -webkit-box-sizing:border-box ;
+    -moz-box-sizing:border-box ;
+    box-sizing:border-box ;
+}
+body{
+    font-family: 'Kanit', sans-serif;
+    background-color: #012E40;
+}
+/* start quiz app  */
+.quiz-app{
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #024959;
+    box-shadow: 0 1px 16px #ffffff94;
+    padding: 20px;
+    border-radius: 7px;
+}
+.quiz-app .quiz-info{
+    display: flex;
+    padding: 20px;
+}
+.quiz-app .category{
+    flex: 1;
+    color: #F2E3D5;
+}
+.quiz-app .count{
+    flex: 1;
+    color: #F2E3D5;
+    text-align: right;
+}
+.quiz-app .questions h2{
+    color: #fff;
+    margin-top: 20px;
+}
+.quiz-app .answers-quiz{
+    padding: 0 15px 15px;
+}
+.quiz-app .answers-quiz .answer{
+    padding: 15px;
+}
+.quiz-app .answers-quiz .answer:not(:last-child){
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+}
+.quiz-app .answers-quiz .answer input[type="Radio"]:checked + label{
+    color: #062464;
+    transition: 0.5s;
+}
+.quiz-app .answers-quiz .answer input + label{
+    cursor: pointer;
+    color: #adadad;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.quiz-app .submit{
+    background-color: #062464;
+    width: 100%;
+    display: block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+}
+.quiz-app .submit:focus{
+    outline: none;
+}
+.quiz-app .bollets{
+    display: flex;
+    margin-top: 20px;
+}
+.quiz-app .bollets .spans{
+    flex: 1;
+}
+.quiz-app .bollets .spans span{
+    background-color: #a5a4a4;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    cursor: pointer;
+}
+.quiz-app .bollets .spans span.open{
+    background-color: #062464;
+}
+.quiz-app  .alarm{
+    font-size: 20px;
+    color: #031742;
+    animation: move 2.5s ease-in-out infinite;
+    margin-right: 15px;
+}
+.quiz-app .results .good {
+    color: chocolate;
+}
+.quiz-app .results .Perfect {
+    color: #031742;
+}
+.quiz-app .results .bad {
+    color: #222;
+}
+
+/* end quiz app  */
+/* start animations  */
+@keyframes move {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* end animations  */
